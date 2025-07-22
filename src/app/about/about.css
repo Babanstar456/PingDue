@@ -1,0 +1,653 @@
+@import "tailwindcss";
+
+/* CSS Custom Properties for Professional Theming */
+:root {
+  --primary-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  --secondary-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --surface: #ffffff;
+  --surface-elevated: #f9fafb;
+  --green-bg: #059669;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset and Base Styles */
+
+
+
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+
+
+/* Header Banner */
+.header-banner {
+  background: var(--green-bg);
+  color: white;
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+.header-content.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.special-badge {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 5rem 0;
+  text-align: center;
+  background: var(--surface);
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 4.5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* Button Styles */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .btn-group {
+    flex-direction: row;
+  }
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  min-width: 160px;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Stats Section */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background: var(--surface-elevated);
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.star {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: #d97706;
+}
+
+.testimonial-text {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.avatar-sm { background: #1d4ed8; }
+.avatar-mj { background: #059669; }
+.avatar-lw { background: #d97706; }
+
+.author-info h4 {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.author-info p {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* Trust Section */
+.trust-section {
+  padding: 5rem 0;
+  background: var(--surface);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.trust-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.trust-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+}
+
+.icon-emerald { background: #d1fae5; color: #047857; }
+.icon-blue { background: #e0f2fe; color: #1d4ed8; }
+.icon-purple { background: #f3e8ff; color: #6b21a8; }
+.icon-yellow { background: #fef3c7; color: #b45309; }
+
+.trust-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.trust-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Case Study Section */
+.case-study-section {
+  background: var(--surface-elevated);
+  padding: 5rem 0;
+}
+
+.case-study-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-study-card {
+  background: var(--surface);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.case-study-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.case-study-content {
+  padding: 1.5rem;
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.company-logo {
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary-gradient);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.company-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.company-info p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .case-study-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.challenge-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.challenge-section p {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.results-list {
+  list-style: none;
+}
+
+.results-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #047857;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.results-panel {
+  background: var(--surface-elevated);
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+}
+
+.results-panel h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+}
+
+.metric-row:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.metric-values {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.metric-before {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.metric-after {
+  color: #047857;
+  font-weight: 600;
+}
+
+.metric-arrow {
+  color: #9ca3af;
+}
+
+/* CTA - Referral Offer Section */
+.offer-section {
+  background: var(--green-bg);
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.offer-content {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.offer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.offer-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.offer-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.btn-offer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: var(--green-bg);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.btn-offer:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background-color: #f0fdf4;
+}
+
+.offer-disclaimer {
+  font-size: 0.85rem;
+  color: #d1fae5;
+  margin-top: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section,
+  .testimonials-section,
+  .trust-section,
+  .case-study-section,
+  .offer-section {
+    padding: 3rem 0;
+  }
+
+  .stats-grid,
+  .testimonials-grid,
+  .trust-grid,
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle,
+  .offer-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-offer {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Accessibility */
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-offer:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Styles */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--text-primary);
+}
+
+/* Performance Enhancements */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Referral Section - Clean and Aligned */
+.referral {
+  background-color: #10b981;
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.referral h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.referral p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.referral .claim-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #10b981;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.referral .claim-btn:hover {
+  background-color: #f0fdf4;
+}
+
+.referral small {
+  display: block;
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  color: #d1fae5;
+}

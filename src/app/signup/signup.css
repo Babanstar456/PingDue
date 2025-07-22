@@ -1,0 +1,226 @@
+/* app/signup/signup.css */
+
+.signup-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Left Panel */
+.signup-left {
+  width: 50%;
+  background: #fff;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-name {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.signup-left h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.signup-left .subtitle {
+  margin-top: 10px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+form {
+  width: 100%;
+}
+
+.name-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9fafb;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 38px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.password-checks {
+  list-style: none;
+  margin-top: 8px;
+  font-size: 12px;
+  padding-left: 0;
+  color: #4b5563;
+}
+
+.password-checks li.valid {
+  color: #10b981;
+}
+
+/* Checkbox */
+.checkbox-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.signup-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.signup-btn:hover {
+  background-color: #1e40af;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #6b7280;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d1d5db;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.google-btn {
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.signin-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signin-link a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* Right Panel */
+.signup-right {
+  width: 50%;
+  background-color: #f1f5f9;
+  padding: 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-right h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.benefit-intro {
+  color: #6b7280;
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.benefit-icon {
+  font-size: 24px;
+}
+
+.benefit-item p {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.trusted-text {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.trust-badges {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #6b7280;
+}
